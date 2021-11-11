@@ -1,0 +1,100 @@
+
+.slide-holder {
+    width: 100%;
+    height: 400px;
+    background: #315178;
+    margin:25px auto 0;
+    border-radius: 5px;
+    overflow: hidden;
+    position:relative;
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+    .slider > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #315178;
+        z-index: 1;
+        transform: scale(1.4) rotate(3deg);
+        opacity: 0;
+        transition: 1s;
+    }
+
+        .slider > div > img {
+            display: block;
+            width: 100%;
+            min-height: 300px;
+        }
+
+        .slider > div > span {
+            position: absolute;
+            bottom: 80px;
+            max-width: 300px;
+            right: 50px;
+            background: rgba(49, 81, 120, 0.7);
+            padding: 15px 20px;
+            font-family: iransans;
+            color: transparent;
+            font-size: 14px;
+            transition: all .6s .8s, color .9s 1.3s;
+            transform: scaleY(0);
+            line-height: 25px;
+            text-align: justify;
+        }
+
+        .slider > div > span a {
+            margin-top:20px;
+            padding:10px 20px;
+        }
+
+        .slider > div.show > span {
+            color: #fff;
+            transform: scaleY(1);
+        }
+
+        .slider > div.show {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+            z-index: 2;
+        }
+
+.slide-nav {
+    position: absolute;
+    z-index: 3;
+    bottom: 15px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
+    user-select: none;
+    -moz-user-select: none;
+    cursor: default;
+}
+
+    .slide-nav > li {
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        border: 2px solid #1270fd;
+        border-radius: 100%;
+        cursor: pointer;
+        vertical-align: middle;
+        transition: .2s;
+        margin: 0 2px;
+    }
+    .slide-nav > li:hover {
+        border: 2px solid #315178;
+    }
+        .slide-nav > li.selected {
+            border: 0px solid #1270fd;
+            background: #2b9b79;
+            cursor: default;
+        }

@@ -1,0 +1,138 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMP.master.cs" Inherits="Shop.SiteMP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>فروشگاه آنلاین</title>
+    <link href="Content/Style/BootstrapGrid.css" rel="stylesheet" />
+    <link href="Content/Style/base.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <link href="Content/Style/responsive.css" rel="stylesheet" />
+    <link href="/Content/swal-alert/sweetalert.css" rel="stylesheet" />
+    <script src="Content/Script/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header-wrapper">
+            <div class="container">
+                <div class="row">
+                    <a href="/" class="right-logo">
+                        <img src="content/img/logo.png" />
+                    </a>
+                    <div class="search-box">
+                        <input type="text" placeholder="جستجو..." class="SearchInput" id="SearchInput" runat="server" />
+                        <button onclick="MainSearch()">
+                            <img src="content/img/search.png" />
+                        </button>
+                    </div>
+                    <div class="left-head-side">
+                        <a href="/Basket.aspx" class="basket">
+                            <img src="Content/img/shopping-cart-48.png" />
+                            <span id="BasketCount" class="BasketCount"></span>
+                        </a>
+                        <a href="/Sign.aspx" class="login-link" id="LoginButton" runat="server">ورود/ثبت نام</a>
+                        <a href="/EditProfile.aspx" class="login-link" id="EditProfileButton" runat="server"></a>
+                        <a href="/LogOut.aspx" class="login-link" id="LogOutButton" runat="server">خروج</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nav-wrapper">
+            <div class="container">
+                <div class="row">
+                    <nav class="float-right">
+                        <ul class="menu" id="MainMenu" runat="server">
+                            <li>
+                                <a href="/">صفحه اصلی</a>
+                            </li>
+
+                        </ul>
+                    </nav>
+                    <ul class="menu float-left">
+                        <li>
+                            <a href="/ListProduct.aspx">جدیدترین محصولات</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <asp:ContentPlaceHolder ID="CPH" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <footer class="footer-holder">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <span>تماس با ما</span>
+                    <ul>
+                        <li>
+                            <span>تلفن : 2500221</span>
+                        </li>
+                        <li>
+                            <span>ایمیل : Info@sde.com</span>
+                        </li>
+                        <li>
+                            <span>آدرس : ساری خیابان خیام</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <span>لینک ها</span>
+                    <ul id="FooterMenu" runat="server">
+                        <li>
+                            <a href="/">صفحه اصلی </a>
+                        </li>
+                        <li>
+                            <a href="/ListProduct.aspx">محصولات ما </a>
+                        </li>
+                        <li>
+                            <a href="#">درباره ما </a>
+                        </li>
+                        <li>
+                            <a href="#">تماس با ما </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6 footer-contact">
+                    <span>در شبکه های اجتماعی</span>
+                    <div>
+                        <a href="#" title="فیسبوک">
+                            <img src="content/img/ic-fb.png" />
+                        </a>
+                        <a href="#" title="اینستاگرام">
+                            <img src="content/img/ic-insta.png" />
+                        </a>
+                        <a href="#" title="تلگرام">
+                            <img src="content/img/ic-tel.png" />
+                        </a>
+
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <a href="#">
+                        <img src="content/img/logo.png" alt="M3 Company" />
+                    </a>
+                </div>
+
+            </div>
+            <section class="row">
+                <section class="col-sm-12 footer-copyright">
+                    <p>تمامی بخش های این فروشگاه برای استفاده در کلاس های آموزشی طراحی شده است.</p>
+                </section>
+            </section>
+        </div>
+    </footer>
+
+    <script src="/Content/swal-alert/sweetalert.min.js"></script>
+    <script src="/Content/Script/mainscript.js"></script>
+
+</body>
+</html>

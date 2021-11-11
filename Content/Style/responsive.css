@@ -1,0 +1,87 @@
+
+@media  only screen and (min-width: 1200px) {
+
+}
+@media  only screen and (max-width: 992px) {
+    .footer-holder > div > div > div{
+        margin-bottom:20px;
+        text-align:center;
+    }
+    .news-archive > article > a > figure {
+        height: 160px;
+    }
+    .aside-image > a > figure {
+        height: 150px;
+    }
+    .ifloat-left {
+        float: unset !important;
+    }
+}
+@media  only screen and (max-width: 768px) {
+  
+    .footer-holder > div > div > div{
+        margin-bottom:30px;
+    }
+    .ads-wrapper > a {
+
+        margin: auto;
+        margin-bottom: 5px;
+        width:70%;
+    }
+    .sp-news > article > a > h2 {
+        margin : 10px auto;
+    }
+    .aside-gallery > article > a > figure {
+        height: 350px;
+    }
+    .left-logo{
+        display: none;
+    }
+    .right-logo{
+        float: unset;
+        display: block;
+        margin: auto;
+        width:250px;
+        text-align: center;
+    }
+    .right-logo > img {
+        margin:auto;
+    }
+    .search-box{
+        float: unset;
+        display: block;
+        width:200px;
+        margin: 10px auto;
+    }
+    .nav-wrapper{
+        height: auto;
+    }
+    .nav-wrapper nav.float-right{
+        float: unset;
+        display: block;
+    }
+    .menu{
+        text-align: center;
+    }
+    .menu > li {
+        float: none;
+        display: inline-block;
+    }
+	.header-wrapper > div.container{
+    background-position: center center;
+}
+}
+
+@media  only screen and (max-width: 480px) {
+
+    .footer-copyright > p {
+    font-size: 14px;
+    }
+    .footer-holder > div > div > div{
+        margin-bottom:70px;
+    }
+    .news-archive > article > a > figure {
+        height: 100px;
+    }
+
+}

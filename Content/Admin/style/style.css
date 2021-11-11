@@ -1,0 +1,595 @@
+﻿*:before, *:after, html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: yekan;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+
+@font-face {
+    font-family: 'Yekan';
+    src: url(../fonts/Yekan.eot?#) format("eot"), url(../fonts/Yekan.woff) format("woff"), url(../fonts/Yekan.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: 'entypo';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/entypo.eot');
+    src: url('../fonts/entypo.eot?#iefix') format('eot'), url('../../../..') format('woff'), url('../fonts/entypo.ttf') format('truetype'), url('../fonts/entypo.svg#entypo') format('svg');
+}
+
+
+.header {
+    width: 100%;
+    height: 40px;
+    background: #46a4b0;
+    position: relative;
+z-index: 10;
+
+}
+
+
+.main_holder {
+    direction: rtl;
+    position: relative;
+    overflow: auto;
+    margin-right: 250px;
+}
+
+
+
+div.right_menu.close {
+    right: -250px !important;
+}
+
+.main_holder.wide {
+    width: 100% !important;
+}
+
+.right_menu > a:hover {
+    background: white;
+    color: black;
+}
+
+.right_menu > a {
+    width: 100%;
+    height: 40px;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    line-height: 40px;
+    color: rgba(85,85,85,1);
+    //background:rgba(24,24,24,1);
+}
+
+div.right_menu {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    float: right;
+    right: 0;
+    top: 0px;
+    padding-top:40px;
+    overflow: auto;
+    z-index: 9;
+    background: #f0f4f5;
+}
+
+    div.right_menu > ul {
+        list-style: none;
+    }
+
+        div.right_menu > ul > li {
+            cursor: pointer;
+            width: 100%;
+            height: auto;
+            position: relative;
+            font-family: Yekan;
+        }
+
+            div.right_menu > ul > li > label {
+                display: block;
+                width: 100%;
+                margin-bottom: 3px;
+                height: 35px;
+                position: relative;
+                color: rgb(85,85,85);
+                text-align: center;
+                font-family:yekan;
+                line-height: 35px;
+                font-size: 16px;
+                cursor: pointer;
+                overflow: hidden;
+            }
+
+                div.right_menu > ul > li > label:hover {
+                    background: rgba(24,24,24,0.1);
+                }
+
+li > input:checked + label > span.left_icon {
+    transform: rotate(-90deg);
+}
+
+span.left_icon {
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 35px;
+    font-size: small;
+    color: rgb(85,85,85);
+}
+
+span.right_icon {
+    width: 35px;
+    height: 35px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    line-height: 35px;
+    font-size: large;
+    color: rgb(85,85,85);
+    text-align: left;
+}
+
+    span.right_icon::before {
+        text-align: center;
+        line-height: 35px;
+        font-size: large;
+        color: rgb(85,85,85);
+    }
+
+.right_menu input[type = radio] {
+    display: none;
+}
+
+   .right_menu input[type = radio]:checked + label {
+        background: rgb(37, 191, 136);
+        color:#fff;
+
+    }
+    .right_menu    input[type = radio]:checked + label span::before {
+        
+        color:#fff !important;
+
+    }
+   .right_menu input[type = radio]:checked ~ ul > li > a {
+        height: 35px;
+        margin-bottom: 1px;
+    }
+
+div.right_menu > ul > li > ul > li > a {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    margin-bottom: 0px;
+    height: 0px;
+    text-decoration: none;
+    background: rgba(24,24,24,0.07);
+    position: relative;
+    color: rgba(95,95,95,1);
+    text-align: center;
+    text-indent: -10px;
+    font-family:Yekan;
+    line-height: 35px;
+    font-size: small;
+    cursor: pointer;
+    transition:.6s;
+}
+
+div.close_right {
+    width: 50px;
+    height: 30px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+    div.close_right > span {
+        position: absolute;
+        width: 35px;
+        height: 3px;
+        background: rgba(255,255,255,1);
+        left: 0;
+        right: 0;
+        margin: auto;
+        border-radius: 2px;
+        filter: blur(0.3px);
+    }
+
+        div.close_right > span:nth-child(1) {
+            top: 2px;
+        }
+
+        div.close_right > span:nth-child(2) {
+            top: 12px;
+        }
+
+        div.close_right > span:nth-child(3) {
+            top: 22px;
+        }
+
+    div.close_right.c_r2 > span:nth-child(1) {
+        top: 12px;
+        transform: rotate(45deg);
+    }
+
+    div.close_right.c_r2 > span:nth-child(2) {
+        top: 12px;
+        transform: rotate(-45deg);
+    }
+
+    div.close_right.c_r2 > span:nth-child(3) {
+        top: 22px;
+        display: none;
+    }
+
+.li_menu > a {
+    width: 100%;
+    height: 35px;
+    color: rgba(85,85,85,1);
+    line-height: 35px;
+    text-align: center;
+    font-family:Yekan;
+    display: block;
+}
+
+    .li_menu > a:hover {
+        background: rgba(85,85,85,0.1);
+    }
+    .user_div{
+        padding:20px 10px;
+        border-bottom:1px solid #aaa;
+        margin-bottom:10px;
+        height: 90px;
+    }
+    .user_div > span{
+        font-family:Yekan;
+        color:#777;
+        font-size:13px;
+        padding:2px 5px;
+        direction:rtl;
+        float:right;
+    }
+    .user_div > a{
+        font-family:Yekan;
+        color:#aaa;
+        direction:rtl;
+        font-size:14px;
+        float:left;
+
+    }
+    .time_h{
+        float:left;
+        font-family:iran-yekan;
+        font-size:13px;
+        direction:rtl;
+        margin-left:10px;
+        color:#Fff;
+        margin-top:10px;
+    }
+
+    .link_holder{
+        padding:20px;
+        overflow:hidden;
+        float:right;
+    }
+    .link_holder > a{
+        float:right;
+        width:200px;
+        height:210px;
+        background:#f8f8f8;
+        border-radius:3px;
+        box-shadow:-2px 3px 10px -5px rgba(0,0,0,0.1);
+        border: 1px solid #eee;
+        text-align:center;
+        font-family:yekan;
+        margin:5px;
+    }
+    .link_holder > a > i{
+       display:block;
+       width:100px;
+       height:100px;
+       border-radius:100%;
+       overflow:hidden;
+       font-size:84px;
+       margin:auto;
+       color: #3fa7c9;
+    }
+    .link_holder > a > i::before {
+   
+    display: block;
+}
+    .link_holder > a > span{
+       display:inline-block;
+      color:#eb3522;
+      font-size:24px;
+      height:45px;
+      line-height:45px;
+      padding:0 10px;
+      min-width:45px;
+      border-radius:30px;
+      background:#fff;
+      margin:10px 0;
+      font-family:Arial;
+      border:1px solid #eee;
+    }
+    .link_holder > a > h4{
+       display:block;
+       width:95%;
+       margin:auto;
+       color:#555;
+    }
+
+
+    
+.site_visit {
+    direction: rtl;
+    margin: 25px;
+    background: rgba(0, 0, 0, 0.79);
+    padding: 5px;
+    font-family: Yekan;
+    font-size: 14px;
+    float:left;
+    width:220px;
+}
+
+    .site_visit > h3 {
+        background: #3c4346;
+        color: #fff;
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+        text-indent: 10px;
+    }
+
+    .site_visit > div {
+        padding: 2px 5px;
+        overflow: hidden;
+        border-bottom: 1px dashed rgba(255, 255, 255, 0.24);
+        width: 90%;
+        margin: 5px auto;
+    }
+    .site_visit > div:last-child {
+        border-bottom:none;
+    }
+
+        .site_visit > div > span:nth-child(1) {
+            color: rgba(255, 255, 255, 0.84);
+            float: right;
+        }
+
+        .site_visit > div > span:nth-child(2) {
+            color: rgba(255, 255, 255, 0.94);
+            float: left;
+        }
+/* close btn*/
+
+@keyframes close_btn1 {
+    10% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: rotate(225deg);
+    }
+
+    100% {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes close_btn2 {
+    10% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: rotate(225deg);
+    }
+
+    100% {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes close_btn3 {
+    10% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: rotate(225deg);
+    }
+
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+
+
+@keyframes close_btn_normal1 {
+    100% {
+        transform: translateY(-250%);
+    }
+
+    80% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(225deg);
+    }
+
+    0% {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes close_btn_normal2 {
+    100% {
+        transform: translateY(0px);
+    }
+
+    80% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(225deg);
+    }
+
+    0% {
+        transform: rotate(225deg);
+    }
+}
+
+@keyframes close_btn_normal3 {
+    100% {
+        transform: translateY(250%);
+    }
+
+    80% {
+        transform: rotate(360deg);
+    }
+
+    50% {
+        transform: rotate(225deg);
+    }
+
+    0% {
+        transform: rotate(135deg);
+    }
+}
+
+
+
+.close_btn {
+    width: 30px;
+    height: 30px;
+    //border:1px solid rgba(53,53,53,1);
+    //margin:100px auto;
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10%;
+    //background:rgba(250,250,250,1);
+    cursor: pointer;
+    z-index: 11;
+}
+
+    .close_btn > span {
+        display: block;
+        width: 90%;
+        height: 10%;
+        //border:1px solid rgba(255,255,255,1);
+        background: rgba(255,255,255,1);
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        transition: 0.2s;
+    }
+
+        .close_btn > span:first-child {
+            transform: translateY(-150%);
+        }
+
+        .close_btn > span:nth-child(3) {
+            transform: translateY(150%);
+        }
+
+
+
+    .close_btn.normal:hover > span:first-child {
+        transform: translateY(-175%);
+    }
+
+    .close_btn.normal:hover > span:nth-child(3) {
+        transform: translateY(175%);
+    }
+
+
+
+    .close_btn.normal > span:first-child {
+        animation: close_btn_normal1 1s 0s 1 normal forwards;
+    }
+
+    .close_btn.normal > span:nth-child(2) {
+        animation: close_btn_normal2 1s 0s 1 normal forwards;
+    }
+
+    .close_btn.normal > span:nth-child(3) {
+        animation: close_btn_normal3 1s 0s 1 normal forwards;
+    }
+
+
+
+
+    .close_btn.active > span:first-child {
+        animation: close_btn1 1.5s 0s 1 normal forwards;
+    }
+
+    .close_btn.active > span:nth-child(2) {
+        animation: close_btn2 1.5s 0s 1 normal forwards;
+    }
+
+    .close_btn.active > span:nth-child(3) {
+        animation: close_btn3 1.5s 0s 1 normal forwards;
+    }
+
+
+
+
+    .close_btn.normal:hover > span:first-child {
+        transform: translateY(-175%);
+    }
+
+    .close_btn.normal:hover > span:nth-child(3) {
+        transform: translateY(175%);
+    }
+        .link{
+        font-family:yekan;
+        color:rgb(34, 116, 189);
+    }
+
+
+                .text {
+            font-family: yekan;
+            display: block;
+            margin: 10px;
+        }

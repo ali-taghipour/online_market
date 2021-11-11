@@ -1,0 +1,125 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMP.master.cs" Inherits="Shop.Admin.AdminMP" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پنل مدیریت</title>
+
+    <link href="/Content/Admin/style/style.css" rel="stylesheet" />
+    <link href="/Content/Admin/style/form.css" rel="stylesheet" />
+    <link href="/Content/Admin/style/NewStyle.css" rel="stylesheet" />
+    <link href="/Content/swal-alert/sweetalert.css" rel="stylesheet" />
+
+    <script src="/Content/Admin/js/jquery-1.8.3.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header class="header">
+        <span class="time_h" id="Time" runat="server"></span>
+    </header>
+    <div class="close_btn active">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="right_menu open">
+        <div class="user_div">
+            <span><b runat="server" id="AdminName"></b>، خوش آمدید</span>
+            <div>
+                <a href="<%=Page.ResolveClientUrl("~/Admin/LogOut.aspx")%>" class="btn btn-sm btn-default">خروج</a>
+
+                <a href="<%=Page.ResolveClientUrl("~/Admin/Users/Edit.aspx?id=" + Request.Cookies["Admin"]["Id"])%>" class="btn btn-sm btn-default">ویرایش پروفایل</a>
+            </div>
+        </div>
+        <ul>
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("admin/dashboard") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/Dashboard.aspx")%>">داشبورد</a>
+            </li>
+
+
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("slides") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/Slides")%>">مدیریت اسلایدها</a>
+            </li>
+
+
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("users") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/Users")%>">مدیریت کاربران</a>
+            </li>
+
+
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("categories") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/Categories")%>">مدیریت دسته بندی ها</a>
+            </li>
+
+
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("products") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/products")%>">مدیریت محصولات</a>
+            </li>
+
+
+
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("comments") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/comments")%>">مدیریت نظرات کاربران</a>
+            </li>
+            
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("baskets") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/baskets")%>">مدیریت سبدها</a>
+            </li>
+            
+            <li class="li_menu <%=Request.Url.AbsoluteUri.ToLower().Contains("payments") ? "active" : ""%>">
+                <a href="<%=Page.ResolveClientUrl("~/admin/payments")%>">مدیریت پرداخت ها</a>
+            </li>
+
+            <%--<li id="SliderMng" runat="server">
+                    <input id="menu_ch7" type="radio" name="accor" />
+                    <label for="menu_ch7">مدیریت اسلایدر<span class="right_icon entypo-picture"></span> <span class="left_icon entypo-left-open"></span></label>
+                    <ul>
+                        <li>
+                            <a href="<%=Page.ResolveClientUrl("~/admin/Slider/AddSlider.aspx")%>">افزودن اسلایدر<span class="right_icon entypo-plus-squared"></span></a>
+                            <a href="<%=Page.ResolveClientUrl("~/admin/Slider/ListSlider.aspx")%>">لیست اسلایدر<span class="right_icon entypo-plus-squared"></span></a>
+                        </li>
+                    </ul>
+                </li>--%>
+
+
+
+            <%--
+                <li>
+                    <input id="menu_ch32" type="radio" name="accor" />
+                    <label for="menu_ch32">مدیریت ادمین<span class="right_icon entypo-newspaper"></span> <span class="left_icon entypo-left-open"></span></label>
+                    <ul>
+                        <li>
+                            <a href="<%=Page.ResolveClientUrl("~/admin/accessadmin/AddUser.aspx")%>">افزودن ادمین<span class="right_icon entypo-plus-squared"></span></a>
+                        </li>
+                        <li>
+                            <a href="<%=Page.ResolveClientUrl("~/admin/accessadmin/ShowUser.aspx")%>">مشاهده ادمین<span class="right_icon entypo-plus-squared"></span></a>
+                        </li>
+
+
+                    </ul>
+                </li>--%>
+            <li class="li_menu">
+                <a target="_blank" href="<%=Page.ResolveClientUrl("/")%>">صفحه اصلی سایت</a>
+            </li>
+        </ul>
+    </div>
+
+    <main class="main_holder">
+        <asp:ContentPlaceHolder ID="AdminCPH" runat="server">
+        </asp:ContentPlaceHolder>
+    </main>
+
+    <script src="/Content/Admin/js/AdminScript.js"></script>
+    <script src="/Content/swal-alert/sweetalert.min.js"></script>
+    <script src="/Content/Admin/js/Validate.js"></script>
+    <script src="/Content/Admin/js/NewScript.js"></script>
+
+    <asp:ContentPlaceHolder ID="Scripts" runat="server">
+    </asp:ContentPlaceHolder>
+
+</body>
+</html>

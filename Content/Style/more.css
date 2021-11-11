@@ -1,0 +1,198 @@
+.product-details {
+    background: #fff;
+    border: 1px solid #c8e1e8;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px 40px;
+}
+.product-slider {
+}
+.product-slider > .product-slider-show {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.product-slider > .product-slider-show > img {
+    width: 100%;
+}
+.product-slider > .product-slider-nav {
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.product-slider > .product-slider-nav > li {
+    float: right;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    margin-left: 5px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.product-slider > .product-slider-nav > li > img {
+    width: 100%;
+    min-height: 60px;
+}
+.product-header {
+    margin-right: 10px;
+}
+    .product-header > h1 {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .product-header > p {
+        line-height: 25px;
+        margin-top: 20px;
+        color: #444;
+    }
+.product-pricing {
+    margin-top: 30px;
+    float: left;
+}
+.product-pricing > .price-holder {
+    float: left;
+    text-align: left;
+    position: relative;
+    margin-left:15px;
+}
+
+.product-pricing> .price-holder > .item-off-price {
+    font-family: yekan;
+    font-size: 16px;
+    color: #aaa;
+    text-decoration: line-through;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+    .product-pricing > .price-holder > .item-price {
+        font-family: yekan;
+        font-size: 25px;
+        color: #1eb042;
+        display: block;
+        margin-top: 15px;
+    }
+
+        .product-pricing > .price-holder > .item-price > span {
+            font-size: 17px;
+            color: #4cbb69;
+        }
+
+
+    .product-pricing > .add-basket {
+        float: left;
+        cursor: pointer;
+        padding: 10px;
+        background: #32abc9;
+        border-radius: 3px;
+    }
+
+    .product-pricing > .add-basket > img {
+        width: 25px;
+    }
+
+    .product-pricing > .add-basket > span {
+        color:#fff;
+        font-family:yekan;
+        margin-left:5px;
+    }
+
+.product-like {
+    float: right;
+    min-width: 50px;
+    
+    height: 50px;
+    margin-right:5px;
+    margin-top:25px;
+}
+    .product-like .like-btn {
+        width: 40px;
+        height:40px;
+        display:inline-block;
+        cursor: pointer;
+        background:url("/Content/img/heart-outline.png") no-repeat center center;
+        background-size:cover;
+    }
+
+    
+    .product-like .like-btn.like {
+        background:url("/Content/img/heart.png") no-repeat center center;
+        background-size:cover;
+    }
+
+    .product-like > span.like-count {
+        font-family:yekan;
+        font-size:14px;
+        color:#888;
+    }
+.product-description-title{
+    padding:10px;
+    font-size:23px;
+    color:#333;
+    margin-top:50px;
+    font-weight:bold;
+
+}
+.product-description {
+    padding: 10px;
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.comment-holder{
+    margin-top:20px;
+    padding-top:30px;
+    border-top:1px solid #eee;
+}
+    .comment-holder  .form-group {
+        margin-bottom: 20px;
+    }
+.comment-btn{
+    text-align:center;
+}
+
+.product-comment > li{
+    display:block;
+    margin-bottom:10px;
+    padding:10px;
+    padding-top:0;
+}
+    .product-comment > li > div:nth-child(1) {
+        padding: 15px;
+        border-radius: 3px 3px 0 0;
+        background: #f3f3f3;
+        overflow: hidden;
+        font-family: yekan;
+    }
+    .product-comment > li > div:nth-child(1) > span:nth-child(1) {
+       float:right;
+       color:#777;
+    }
+    .product-comment > li > div:nth-child(1) > span:nth-child(2) {
+        float: left;
+        color: #999;
+        font-size:14px;
+    }
+
+    .product-comment > li > div:nth-child(2) {
+        padding: 25px 15px;
+        line-height: 23px;
+        border-radius: 0 0 3px 3px;
+        background: #fafafa;
+        font-family: iransans;
+        border:1px solid #f3f3f3;
+        color: #444;
+    }
+
+
+
+
+
+
+
+

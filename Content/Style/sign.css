@@ -1,0 +1,26 @@
+﻿.sign-form {
+    width: 480px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #eee;
+    margin: 25px auto;
+}
+
+    .sign-form .form-group legend {
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .sign-form .sign-form-register, .sign-form .sign-form-login {
+        width: 100%;
+        display:none;
+    }
+
+        .sign-form .sign-form-register.show {
+            display: block;
+        }
+
+        .sign-form .sign-form-login.show {
+            display: block;
+        }
